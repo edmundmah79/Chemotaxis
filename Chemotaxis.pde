@@ -1,11 +1,9 @@
  Bacteria zac;
- Food blob;
  void setup()   
  {     
  	//initialize bacteria variables here   
  	size(500,500);
  	zac = new Bacteria();
- 	blob = new Food();
  }   
  void draw()   
  {    
@@ -13,7 +11,7 @@
  	background(255);
  	zac.show();
  	zac.walk();
- 	
+ 	food();
  }  
  class Bacteria    
  {     
@@ -35,4 +33,9 @@
    		fill(myColor);
  		ellipse(myX,myY,15,15);
  	}
+ }
+ void food()
+ {
+ 	fill(0);
+ 	rect(mouseX,mouseY,20,20);
  }    
