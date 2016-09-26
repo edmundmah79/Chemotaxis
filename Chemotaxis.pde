@@ -2,12 +2,11 @@
  int fSizey = 50;
  int bSizex = 15;
  int bSizey = 15;
- Bacteria zac;
+ Bacteria[] colony;
  void setup()   
  {     
  	//initialize bacteria variables here   
  	size(1000,1000);
- 	zac = new Bacteria();
  }   
  void draw()   
  {    
@@ -16,8 +15,14 @@
  	fill(255);
  	ellipse(500,500,1000,1000);
  	food();
- 	zac.show();
- 	zac.walk();
+ 	colony = new Bacteria[10];
+ 	for(int i = 0; i < 10; i++)
+	{
+	   colony[i] = new Bacteria();
+	}
+ 	colony[i].walk();
+ 	colony[i].show();
+ 	
  
  }  
  class Bacteria    
